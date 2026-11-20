@@ -2,7 +2,6 @@
 
 ##  Résultats réels
 
-> Les 9 captures ci-dessous ont été produites par `capture_shots.ps1` à partir des services **réellement en cours d'exécution**, puis vérifiées une à une.
 
 ### 1 Eureka Server (8761)
 
