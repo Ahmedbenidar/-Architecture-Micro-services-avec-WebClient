@@ -1,0 +1,22 @@
+package com.example.car.config;
+
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.reactive.function.client.WebClient;
+
+@Configuration
+public class WebClientConfig {
+
+    /**
+     * @LoadBalanced permet d'ecrire des URI logiques du type
+     * http://SERVICE-CLIENT/api/clients/1 : le nom Eureka est resolu par
+     * Spring Cloud LoadBalancer aupres du registre Eureka.
+     * Sans cette annotation : "No instances available for SERVICE-CLIENT".
+     */
+    @Bean
+    @LoadBalanced
+    public WebClient.Builder webClientBuilder() {
+        return WebClient.builder();
+    }
+}
